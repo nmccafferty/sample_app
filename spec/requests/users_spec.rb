@@ -37,5 +37,13 @@ describe "Users" do
       end
     end
 	
+	describe "check the elements" do
+
+      it "should have all the right elements" do
+          visit signup_path
+		  response.should have_selector("input[name='user[password_confirmation]'][type='password']")
+      end
+    end
+	
   end
 end
